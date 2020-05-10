@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.si.blog.mapper.BlogMenuMapper">
+    <resultMap id="blogMenu" type="com.si.blog.model.BlogMenu">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="code" column="type_code" />
+        <result property="url" column="url" />
+        <result property="parentCode" column="parent_code" />
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+    </resultMap>
+    <resultMap id="blogMenuVo" type="com.si.blog.model.BlogMenuVo">
+        <result property="name" column="name" />
+        <result property="code" column="type_code" />
+        <result property="url" column="url" />
+        <collection property="childList" ofType="com.si.blog.model.BlogMenuVo" columnPrefix="c_">
+            <result property="name" column="name" />
+            <result property="code" column="type_code" />
+            <result property="url" column="url" />
+        </collection>
+    </resultMap>
+    <select id="getBlogMenuList" parameterType="map" resultMap="blogMenuVo">
+        select
+          p.name,p.type_code code,p.url,
+          c.name c_name,c.type_code c_code,c.url c_url
+        from blog_menu p
+        left join blog_menu c on p.type_code=c.parent_code
+        where  p.status=1 and p.parent_code is null
+    </select>
+
+</mapper>

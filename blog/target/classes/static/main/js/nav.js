@@ -1,35 +1,70 @@
+function openBlog(url){
+    alert(url);
+    $("#content").attr("src", url);
+}
 $(function(){
-    // nav收缩展开
-    $('.nav-item>a').on('click',function(){
-        if (!$('.nav').hasClass('nav-mini')) {
-            if ($(this).next().css('display') == "none") {
-                //展开未展开
-                $('.nav-item').children('ul').slideUp(300);
-                $(this).next('ul').slideDown(300);
-                $(this).parent('li').addClass('nav-show').siblings('li').removeClass('nav-show');
-            }else{
-                //收缩已展开
-                $(this).next('ul').slideUp(300);
-                $('.nav-item.nav-show').removeClass('nav-show');
+    $.ajax({
+        url:"/blog/blogMenu/getBlogMenuList",
+        success:function(data){
+            if(data.success){
+                var menuList="";
+                $.each(data.data,function(i,item){
+                    menuList+="<li class='nav-item'>";
+                    menuList += "<a href='javascript:;'><i  class='my-icon nav-icon icon_3'></i><span>"+item.name+"</span><i class='my-icon nav-more'></i></a>";
+                    menuList +="<ul>";
+
+                    $.each(item.childList,function(j,childItem){
+                        // menuList +="<li><a href="+childItem.url+"><span>"+childItem.name+"</span></a></li>";
+                        // menuList +="<li><a href='javascript:;' onclick='openBlog("+childItem.url+")'><span>"+childItem.name+"</span></a></li>";
+                        menuList +="<li><a href='javascript:;' onclick='openBlog()'><span>"+childItem.name+"</span></a></li>";
+                    });
+                    menuList +="</ul>";
+                    menuList +="</li>";
+                });
+                $("#blog_menu_ul").append(menuList);
             }
-        }
-    });
-    //nav-mini切换
-    $('#mini').on('click',function(){
-        if (!$('.nav').hasClass('nav-mini')) {
-            $('.nav-item.nav-show').removeClass('nav-show');
-            $('.nav-item').children('ul').removeAttr('style');
-            $('.nav').addClass('nav-mini');
-        }else{
-            $('.nav').removeClass('nav-mini');
+            bindMenuClickEvent();
         }
     });
 
-        $(".nav-item>ul>li>a ").on("click",function() {
-            var address = $(this).attr("data-src");
-            // $("iframe").attr("src", address);
-            $("#content").attr("src", "blog/jvm/test.html");
+    /**
+     * 绑定菜单点击事件
+     */
+  function bindMenuClickEvent(){
+      // nav收缩展开
+      $('.nav-item>a').on('click',function(){
+          if (!$('.nav').hasClass('nav-mini')) {
+              if ($(this).next().css('display') == "none") {
+                  //展开未展开
+                  $('.nav-item').children('ul').slideUp(300);
+                  $(this).next('ul').slideDown(300);
+                  $(this).parent('li').addClass('nav-show').siblings('li').removeClass('nav-show');
+              }else{
+                  //收缩已展开
+                  $(this).next('ul').slideUp(300);
+                  $('.nav-item.nav-show').removeClass('nav-show');
+              }
+          }
+      });
+        //nav-mini切换
+        $('#mini').on('click',function(){
+            if (!$('.nav').hasClass('nav-mini')) {
+                $('.nav-item.nav-show').removeClass('nav-show');
+                $('.nav-item').children('ul').removeAttr('style');
+                $('.nav').addClass('nav-mini');
+            }else{
+                $('.nav').removeClass('nav-mini');
+            }
         });
+        //日志点击事件
+/*        $(".nav-item>ul>li>a ").on("click",function() {
+            var address = $(this).attr("href");
+            console.info(address);
+            // $("iframe").attr("src", address);
+            $("#content").attr("src", address);
+        });*/
+
+    }
 
 
 
