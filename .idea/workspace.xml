@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f2cfb0-d0e6-4955-b571-21ebb6b8b73c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/src/main/java/com/si/blog/controller/BlogMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/main/java/com/si/blog/mapper/BlogMenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/main/java/com/si/blog/model/BlogMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/main/java/com/si/blog/model/BlogMenuVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/main/java/com/si/blog/model/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/main/java/com/si/blog/service/BlogMenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/main/java/com/si/blog/service/impl/BlogMenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/main/resource/mapping/blog_menu_mapping.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/main/resource/static/blog/jvm/JMM.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/main/resource/static/blog/jvm/JMM_files/20160921182337904.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/java/com/si/blog/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/java/com/si/blog/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/resource/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/resource/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/resource/static/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/resource/static/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/src/main/resource/static/main/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/resource/static/main/js/nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/target/classes/com/si/blog/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/blog/target/classes/com/si/blog/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/target/classes/static/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/target/classes/static/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/target/classes/static/main/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/target/classes/static/main/js/nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/src/main/resource/static/main/js/nav.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="495">
+              <caret line="18" column="126" lean-forward="true" selection-start-line="18" selection-start-column="126" selection-end-line="18" selection-end-column="126" />
             </state>
           </provider>
         </entry>
@@ -305,18 +286,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resource" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyBlog" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyBlog" type="b2602c69:ProjectViewProjectNode" />
@@ -335,7 +305,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589125048467" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589125463945" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -399,7 +369,7 @@
       <workItem from="1588946439928" duration="1522000" />
       <workItem from="1589019954095" duration="6467000" />
       <workItem from="1589077839179" duration="11000" />
-      <workItem from="1589104803180" duration="12109000" />
+      <workItem from="1589104803180" duration="12624000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1588777524235</created>
@@ -415,17 +385,24 @@
       <option name="project" value="LOCAL" />
       <updated>1588946859936</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="后台">
+      <created>1589125108767</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589125108767</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23592000" />
+    <option name="totallyTimeSpent" value="24107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13658147" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13658147" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -435,7 +412,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3996828" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -506,7 +483,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初次提交" />
     <MESSAGE value="提交测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交测试" />
+    <MESSAGE value="后台" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/blog/src/test/java/com/si/blog/AppTest.java">
@@ -654,8 +632,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/src/main/resource/static/main/js/nav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="495">
+          <caret line="18" column="126" lean-forward="true" selection-start-line="18" selection-start-column="126" selection-end-line="18" selection-end-column="126" />
         </state>
       </provider>
     </entry>

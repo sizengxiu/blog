@@ -15,8 +15,8 @@ $(function(){
 
                     $.each(item.childList,function(j,childItem){
                         // menuList +="<li><a href="+childItem.url+"><span>"+childItem.name+"</span></a></li>";
-                        // menuList +="<li><a href='javascript:;' onclick='openBlog("+childItem.url+")'><span>"+childItem.name+"</span></a></li>";
-                        menuList +="<li><a href='javascript:;' onclick='openBlog()'><span>"+childItem.name+"</span></a></li>";
+                        menuList +="<li><a href='javascript:;' onclick='openBlog("+childItem.url+")'><span>"+childItem.name+"</span></a></li>";
+                        // menuList +="<li><a href='javascript:;' onclick='openBlog()'><span>"+childItem.name+"</span></a></li>";
                     });
                     menuList +="</ul>";
                     menuList +="</li>";
