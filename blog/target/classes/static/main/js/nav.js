@@ -1,7 +1,4 @@
-function openBlog(url){
-    alert(url);
-    $("#content").attr("src", url);
-}
+
 $(function(){
     $.ajax({
         url:"/blog/blogMenu/getBlogMenuList",
@@ -14,9 +11,7 @@ $(function(){
                     menuList +="<ul>";
 
                     $.each(item.childList,function(j,childItem){
-                        // menuList +="<li><a href="+childItem.url+"><span>"+childItem.name+"</span></a></li>";
-                        // menuList +="<li><a href='javascript:;' onclick='openBlog("+childItem.url+")'><span>"+childItem.name+"</span></a></li>";
-                        menuList +="<li><a href='javascript:;' onclick='openBlog()'><span>"+childItem.name+"</span></a></li>";
+                        menuList +="<li><a href='javascript:;' onclick='openBlog(this);' url='"+childItem.url+"'><span>"+childItem.name+"</span></a></li>";
                     });
                     menuList +="</ul>";
                     menuList +="</li>";
@@ -56,13 +51,6 @@ $(function(){
                 $('.nav').removeClass('nav-mini');
             }
         });
-        //日志点击事件
-/*        $(".nav-item>ul>li>a ").on("click",function() {
-            var address = $(this).attr("href");
-            console.info(address);
-            // $("iframe").attr("src", address);
-            $("#content").attr("src", address);
-        });*/
 
     }
 
@@ -93,6 +81,7 @@ function initIframeHeight(height){
         $(iframe).height(realHeight);
     }
 }
-// function openPaper(url) {
-//     $("iframe").attr("src", url);
-// }
+//日志点击事件
+function openBlog(url){
+    $("#content").attr("src", "/blog"+url.getAttribute("url"));
+}
