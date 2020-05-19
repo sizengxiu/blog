@@ -11,7 +11,8 @@ $(function(){
                     menuList +="<ul>";
 
                     $.each(item.childList,function(j,childItem){
-                        menuList +="<li><a href='javascript:;' onclick='openBlog(this);' url='"+childItem.url+"'><span>"+childItem.name+"</span></a></li>";
+                        // menuList +="<li><a href='javascript:;' onclick='openBlog(this,"+childItem+");' url='"+childItem.url+"'><span>"+childItem.name+"</span></a></li>";
+                        menuList +="<li><a href='javascript:;' onclick='openBlog1(\""+childItem.id+"\",\""+childItem.url+"\")'><span>"+childItem.name+"</span></a></li>";
                     });
                     menuList +="</ul>";
                     menuList +="</li>";
@@ -55,7 +56,6 @@ $(function(){
     }
 
 
-
 });
 /**
  * iframe自适应高度，height为手动设置的最小高度
@@ -82,6 +82,25 @@ function initIframeHeight(height){
     }
 }
 //日志点击事件
-function openBlog(url){
+function openBlog(data){
+    console.info(data);
+    console.info(this);
     $("#content").attr("src", "/blog"+url.getAttribute("url"));
+    // var type="01";
+    // $("#content").attr("src", "/blog/main/html/blog_list.html?type="+type);
 }
+//日志点击事件
+function openBlog1(id,url){
+    console.info(id+url);
+    $("#content").attr("src", "/blog"+url);
+    $.ajax({
+        type: "post",
+        url: "/blog/blogMenu/clickBlog",
+        data: {"blogId": id},
+        success: function (result) {
+
+        }
+    });
+}
+
+

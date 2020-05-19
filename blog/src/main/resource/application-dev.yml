@@ -7,5 +7,11 @@ spring:
     password: *
     url: jdbc:mysql://rm-bp1yugz2r0g1hs5p82o.mysql.rds.aliyuncs.com:3306/liyi?&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 0
+    host: 47.104.64.72
+    port: 6379
+    password:
+    timeout: 100
 mybatis:
   mapper-locations: classpath:mapping/*mapping.xml

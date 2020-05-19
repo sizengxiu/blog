@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>头发掉光的时候，没有一行代码是无辜的。</h1>
+    <h2>所谓写代码，不过是给头发的坟墓添砖加瓦。学习源码，把坟墓打造成金字塔。卧等各位挖。</h2>
+    <button value="播放" >波方</button>
+<a href="/blog/blog/jvm/JMM.html" target="content"> 测试</a>
+</body>
+<script type="text/javascript">
+
+    function playAudio(){
+        var msg = new SpeechSynthesisUtterance("语音测试");
+        msg.volume = 100  // 声音的音量
+        msg.rate = 1 // 语速，数值，默认值是1，范围是0.1到10
+        msg.pitch = 1.5 // 表示说话的音高，数值，范围从0（最小）到2（最大）。默认值为1
+        window.speechSynthesis.speak(msg);
+    }
+    function playAudio2(){
+/*        lan=zh（语言zh:中文；en:英文；fr:法文；）
+
+ie=UTF-8（字符集）
+
+per=3（每3个字符停顿）
+
+spd=5（语音播放速度，数字越大越快0-15）
+
+text=“”（需要转换的文字）*/
+        var text="从前有个人，天天写代码，于是他变成几了";
+        var url="http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=1&per=1&text="+text;
+        var n=new Audio();
+        n.src=url;
+        n.play();
+    }
+    playAudio2();
+</script>
+</html>

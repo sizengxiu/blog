@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.si.blog.mapper.BlogClickRankMapper">
+    <resultMap id="blogClickRank" type="com.si.blog.model.BlogClickRankVo">
+        <id property="id" column="id" />
+        <result property="blogId" column="blog_id" />
+        <result property="blogName" column="blog_name" />
+        <result property="blogUrl" column="blog_url" />
+        <result property="clickTimes" column="click_times" />
+    </resultMap>
+    <insert id="addClickTimes" parameterType="com.si.blog.model.BlogClickRankVo" >
+        insert into blog_click_rank(blog_id,click_times)
+        values(#{blogId},1)
+    </insert>
+    <update id="addClickTimesByOne" parameterType="int" >
+        update blog_click_rank
+        set click_times= click_times+1
+        where blog_id=#{blogId}
+    </update>
+    <select id="getClickRankList" parameterType="int" resultMap="blogClickRank">
+        select
+         menu.id blog_id,
+         menu.url blog_url,
+         menu.name blog_name,
+         rank.click_times
+        from blog_click_rank rank
+        left join blog_menu menu on menu.id=rank.blog_id
+        where  menu.status=1
+        order by rank.click_times desc
+    </select>
+
+</mapper>
